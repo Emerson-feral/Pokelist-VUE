@@ -1,19 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HelloWorld from '../components/HelloWorld.vue';
-import Second from '../components/Second.vue';
+import List from '../components/List.vue';
+import Detail from '../components/Detail.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HelloWorld
+      name: 'list',
+      component: List
     },
     {
       path: '/second',
       name: 'second',
-      component: Second
+      component: Detail
     }
   ]
 });
