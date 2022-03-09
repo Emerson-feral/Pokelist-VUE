@@ -1,13 +1,11 @@
 <script>
+import { mapState } from 'vuex';
+
 export default {
-  data() {
-    return {
-      names: [
-        { id: 0, name: 'Emerson' },
-        { id: 1, name: 'Sphirot' },
-        { id: 2, name: 'Max' }
-      ]
-    };
+  computed: {
+    ...mapState({
+      pokemons: (state) => state.pokemons
+    })
   }
 };
 
@@ -16,16 +14,15 @@ export default {
 <template>
   <div>
     <h1>Pokemon List</h1>
-    <ul>
-      <li
-      v-for="item in names" :key="item.id">
-        {{item.name}}
-      </li>
-    </ul>
-     <router-link to="/second">Second</router-link>
+      <router-link tag="li" class="router" :to="`/detail/${item.id}`"
+      v-for="item in pokemons" :key="item.id" >
+      {{item.name}}
+      </router-link>
   </div>
 </template>
 
 <style scoped>
-
+  .router{
+    display: flex;
+  }
 </style>
