@@ -11,8 +11,8 @@ const router = createRouter({
       component: List
     },
     {
-      path: '/second',
-      name: 'second',
+      path: '/detail:id',
+      name: 'detail',
       component: Detail
     }
   ]
