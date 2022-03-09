@@ -23,7 +23,7 @@ export default {
         {{item.name}}
       </li>
     </ul>
-     <RouterLink to="/second">second</RouterLink>
+     <router-link to="/second">Second</router-link>
   </div>
 </template>
 
